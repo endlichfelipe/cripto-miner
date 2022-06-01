@@ -19,7 +19,7 @@ class CryptoMinerTransaction:
     challenge = property(get_challenge, set_challenge)
 
     def _generate_seed(self):
-        return ''.join(random.choice('0123456789abcdefghijklmnopqrstuvwxyz') for _ in range(self.challenge))
+        return ''.join(random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for _ in range(self.challenge))
 
     def _generate_hash(self):
         return hashlib.sha1(self.seed.encode()).hexdigest()

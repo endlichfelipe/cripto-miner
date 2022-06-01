@@ -9,12 +9,12 @@ class CryptoMinerServer:
         self.port = port
         self.cryptominer = SequentialCryptoMiner() if sequential else RandomCryptoMiner()
         self.server = SimpleXMLRPCServer((host, port))
-        self.server.register_function(self.get_transaction_id, 'getTransactionID')
-        self.server.register_function(self.get_challenge, 'getChallenge')
-        self.server.register_function(self.get_transaction_status, 'getTransactionStatus')
-        self.server.register_function(self.submit_challenge, 'submitChallenge')
-        self.server.register_function(self.get_winner, 'getWinner')
-        self.server.register_function(self.get_seed, 'getSeed')
+        self.server.register_function(self.get_transaction_id, 'get_transaction_id')
+        self.server.register_function(self.get_challenge, 'get_challenge')
+        self.server.register_function(self.get_transaction_status, 'get_transaction_status')
+        self.server.register_function(self.submit_challenge, 'submit_challenge')
+        self.server.register_function(self.get_winner, 'get_winner')
+        self.server.register_function(self.get_seed, 'get_seed')
         
 
     def get_transaction_id(self):
