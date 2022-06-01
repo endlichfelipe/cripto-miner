@@ -1,6 +1,5 @@
-from codecs import CodecInfo
-from concurrent.futures import thread
 import sys
+from time import sleep
 import xmlrpc.client
 from itertools import product
 from threading import Thread, Condition
